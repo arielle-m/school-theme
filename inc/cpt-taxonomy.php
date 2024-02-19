@@ -76,8 +76,8 @@ function school_register_taxonomies() {
         'singular_name'     => _x( 'Student Category', 'taxonomy singular name' ),
         'search_items'      => __( 'Search Student Categories' ),
         'all_items'         => __( 'All Student Categories' ),
-        'parent_item'       => null,
-        'parent_item_colon' => null,
+        'parent_item'       => __( 'Parent Student Categories' ),
+        'parent_item_colon' => __( 'Parent Student Categories:' ),
         'edit_item'         => __( 'Edit Student Categories' ),
         'view_item'         => __( 'View Student Category' ),
         'update_item'       => __( 'Update Student Category' ),
@@ -87,7 +87,7 @@ function school_register_taxonomies() {
     );
 
     $args = array(
-        'hierarchical'      => false,
+        'hierarchical'      => true,
         'labels'            => $labels,
         'show_ui'           => true,
         'show_in_menu'      => true,
