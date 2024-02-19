@@ -153,14 +153,14 @@ function school_theme_scripts() {
 			'aos-styles',
 			get_template_directory_uri() . '/css/aos.css',
 			array(),
-			'2.3.1'
+			'2.3.2',
 		);
 
 		wp_enqueue_script(
 			'aos-scripts',
 			get_template_directory_uri() . '/js/aos.js',
 			array(),
-			'2.3.1',
+			'2.3.2',
 			array( 'strategy' => 'defer' ),
 		);
 	}
