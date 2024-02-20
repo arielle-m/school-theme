@@ -148,7 +148,7 @@ function school_theme_scripts() {
 	}
 
 	// Animate on Scroll (AoS) scripts and styles
-	if ( is_page( 13 ) ) {
+	if ( is_home() ) {
 		wp_enqueue_style(
 			'aos-styles',
 			get_template_directory_uri() . '/css/aos.css',
@@ -161,6 +161,14 @@ function school_theme_scripts() {
 			get_template_directory_uri() . '/js/aos.js',
 			array(),
 			'2.3.2',
+			array( 'strategy' => 'defer' ),
+		);
+
+		wp_enqueue_script(
+			'aos-settings',
+			get_template_directory_uri() . '/js/aos-settings.js',
+			array( 'aos-scripts' ),
+			_S_VERSION,
 			array( 'strategy' => 'defer' ),
 		);
 	}
