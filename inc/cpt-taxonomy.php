@@ -35,11 +35,11 @@ function school_register_custom_post_types() {
         'query_var'          => true,
         'rewrite'            => array( 'slug' => 'students' ),
         'capability_type'    => 'post',
-        'has_archive'        => false,
+        'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 30,
         'menu_icon'          => 'dashicons-groups',
-        'supports'           => array( 'title', 'editor' ),
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
         'template'           => array( 
                                     array( 'core/paragraph',
                                         array(
