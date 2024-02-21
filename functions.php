@@ -148,7 +148,7 @@ function school_theme_scripts() {
 	}
 
 	// Animate on Scroll (AoS) scripts and styles
-	if ( is_page( 13 ) ) {
+	if ( is_home() ) {
 		wp_enqueue_style(
 			'aos-styles',
 			get_template_directory_uri() . '/css/aos.css',
@@ -161,6 +161,14 @@ function school_theme_scripts() {
 			get_template_directory_uri() . '/js/aos.js',
 			array(),
 			'2.3.2',
+			array( 'strategy' => 'defer' ),
+		);
+
+		wp_enqueue_script(
+			'aos-settings',
+			get_template_directory_uri() . '/js/aos-settings.js',
+			array( 'aos-scripts' ),
+			_S_VERSION,
 			array( 'strategy' => 'defer' ),
 		);
 	}
@@ -212,3 +220,19 @@ function school_change_title_text( $title ){
   
 add_filter( 'enter_title_here', 'school_change_title_text' );
 
+
+// Change the Excerpt Length to 25 words
+function school_excerpt_length( $length ) {
+	return 25;
+}
+add_filter( 'excerpt_length', 'school_excerpt_length', 999);
+
+
+// Change the excerpt more (read more) text
+function school_excerpt_more( $more ) {
+	// we're assuming that this is being run in a loop, so it's okay to use the get_permalink
+	if ( is_post_type_archive( 'school-student' ) )
+	$more = '... <a class="read-more" href="' . esc_url( get_permalink() ) . '">Read more about the student</a>';
+	return $more;
+}
+add_filter( 'excerpt_more', 'school_excerpt_more' );
