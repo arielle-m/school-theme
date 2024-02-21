@@ -99,6 +99,11 @@ function school_theme_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	// Support for block editor features - @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/ **
+		
+	add_theme_support('align-wide');
+    add_theme_support('align-full');
 }
 add_action( 'after_setup_theme', 'school_theme_setup' );
 
