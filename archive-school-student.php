@@ -13,7 +13,7 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<header class="page-header">
-			<h1><?php post_type_archive_title(); ?></h1>
+			<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
 			<p><?php the_archive_description(); ?></p>
 			<?php
 			the_archive_description( '<div class="archive-description">', '</div>' );
