@@ -101,7 +101,7 @@ function school_theme_setup() {
 	);
 
 	// Support for block editor features - @link https://developer.wordpress.org/block-editor/developers/themes/theme-support/ **
-		
+
 	add_theme_support('align-wide');
     add_theme_support('align-full');
 }
@@ -224,6 +224,18 @@ function school_change_title_text( $title ){
 }
   
 add_filter( 'enter_title_here', 'school_change_title_text' );
+
+// Change CPT title placeholder text for school-staff
+function school_change_staff_title_text( $title ){
+	$screen = get_current_screen();
+  
+	if  ( 'school-staff' == $screen->post_type ) {
+		$title = 'Add staff name';
+	}
+  
+	return $title;
+}
+add_filter( 'enter_title_here', 'school_change_staff_title_text' );
 
 
 // Change the Excerpt Length to 25 words
