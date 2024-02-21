@@ -104,6 +104,9 @@ function school_theme_setup() {
 
 	add_theme_support('align-wide');
     add_theme_support('align-full');
+
+	// Custom Crop Sizes
+	add_image_size( 'portrait-student', 200, 300, true );
 }
 add_action( 'after_setup_theme', 'school_theme_setup' );
 
