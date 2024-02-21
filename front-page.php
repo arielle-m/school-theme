@@ -23,11 +23,6 @@ get_header();
 
 			get_template_part( 'template-parts/content', 'page' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
 		endwhile; // End of the loop.
 		?>
 
@@ -39,12 +34,12 @@ get_header();
 				'posts_per_page' => 3
 			);
 			$blog_query = new WP_Query( $args );
-			if ($blog_query->have_posts()  ){
-				while ($blog_query->have_posts() ) {
+			if ( $blog_query->have_posts() ){
+				while ( $blog_query->have_posts() ) {
 					$blog_query->the_post();
 					?>
 					<article>						
-						<a href="<?php the_permalink();?>"><?php the_post_thumbnail('thumbnail'); ?>
+						<a href="<?php the_permalink();?>"><?php the_post_thumbnail( 'medium' ); ?>
 						<h3><?php the_title();?></h3> 
 						
 						<!-- use get_the_date() to get the date next time, "the_date" alone didn't work properly -->
