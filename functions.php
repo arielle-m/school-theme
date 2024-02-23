@@ -149,6 +149,13 @@ add_action( 'widgets_init', 'school_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function school_theme_scripts() {
+	// load in google fonts
+	wp_enqueue_style (
+		'school-googlefonts',
+		'https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap',
+		array(),
+	);
+
 	wp_enqueue_style( 'school-theme-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'school-theme-style', 'rtl', 'replace' );
 
