@@ -34,3 +34,5 @@ if (function_exists ('get_field')) {
 
 }
 ?>
+<?php
+get_footer();

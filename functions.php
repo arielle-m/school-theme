@@ -50,8 +50,11 @@ function school_theme_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'school-theme' ),
+			'footer' => esc_html__( 'Footer', 'school-theme' ),			
 		)
 	);
+
+		
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
@@ -256,3 +259,24 @@ function school_excerpt_more( $more ) {
 	return $more;
 }
 add_filter( 'excerpt_more', 'school_excerpt_more' );
+
+
+
+
+	// add ACF img to footer menu
+	function my_wp_nav_menu_items($items, $args)
+	{
+	// get menu
+	$menu = wp_get_nav_menu_object($args->menu);
+	// modify primary only
+	if ($args->menu == "Footer Menu") {
+		// vars
+		$logo = get_field("logo", $menu);
+		// prepend logo
+		$html_logo = "<a href='" . home_url() . "'><img src='" . $logo['url'] . "' alt='" . $logo['alt'] . "' /></a>";
+		// append html
+		$items = $html_logo;
+	}
+	return $items;
+	}
+	add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2);
