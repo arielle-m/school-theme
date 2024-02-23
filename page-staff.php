@@ -61,6 +61,7 @@ get_header();
 							if ( $query -> have_posts() ) {
 								// Output Term name.
 								echo '<h2>' . esc_html( $term->name ) . '</h2>';
+								echo '<div class="staff-section">';
 								
 								wp_reset_postdata();
 							
@@ -68,7 +69,8 @@ get_header();
 								while ( $query -> have_posts() ) {
 									$query -> the_post();
 									?>
-									<div class="staff">
+									
+									<article class="staff">
 										<h3><?php the_title(); ?></h3>
 										<?php
 										// Display custom fields
@@ -76,7 +78,8 @@ get_header();
 											$staff_biography = get_field( 'bio' );
 											$course = get_field( 'courses' );
 											$instructor_website = get_field( 'website' );
-
+											?>
+											<?php
 											if ( $staff_biography ) {
 												echo '<p>' . esc_html( $staff_biography ) . '</p>';
 											}
@@ -89,9 +92,13 @@ get_header();
 											}
 										}
 										?>
-									</div>
+									</article>
 									<?php
+									
 								}
+								?>
+								</div>
+								<?php
 								wp_reset_postdata();
 							}
 						}

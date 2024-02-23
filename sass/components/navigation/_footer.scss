@@ -1,0 +1,28 @@
+footer {
+    background-color: $color__dark;
+    color: $color__light;
+    padding: 2rem;
+}
+
+.site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+    height: auto;
+    filter: invert(100%);
+
+}
+
+#menu-footer-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.site-info {
+    text-align: center;    
+}

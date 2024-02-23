@@ -1,0 +1,31 @@
+
+.site-main {
+    margin: 1rem 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.entry-content > p {
+    margin: 1rem 2rem;
+}
+
+.entry-header {
+    text-align: center;
+}
+.staff-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    
+}
+.staff-section .staff {
+    padding: 1rem;
+}
+
+@include mq(em(768)) {
+    .staff-section .staff {
+        max-width: 40%;
+    }
+}

@@ -39,7 +39,7 @@
 		</div><!-- .site-info -->
 
 		<div class="footer-menu">		
-
+			<h3>Links</h3>
 			<nav id="footer-navigation" class="footer-navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'footer') ); ?>
 				
