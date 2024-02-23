@@ -4,22 +4,23 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $font__header;
 	clear: both;
 	margin: 0.5em 0;
 }
 
 h1 {
-	font-size: 2.5rem;
+	font-size: 3rem;
 }
 
 h2 {
-	font-size: 2rem;
+	font-size: 2.5rem;
 }
 
 h3 {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
 
 h4 {
-	font-size: 1.25rem;
+	font-size: 1.5rem;
 }
