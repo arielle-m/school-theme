@@ -26,13 +26,6 @@ get_header();
 			'posts_per_page'	=> -1,
 			'orderby'			=> 'title',
 			'order'				=> 'ASC',
-			// 'tax_query'			=> array(
-			// 	array(
-			// 		'taxonomy' 	=> 'school-student-category',
-			// 		'field'		=> 'slug',
-			// 		'terms'		=> array( 'designer', 'developer' ),
-			// 	)
-			// )
 		);
 		$query = new WP_Query( $args );
 		if ( $query -> have_posts() ) :
@@ -50,7 +43,12 @@ get_header();
 					</h2>
 					<?php the_post_thumbnail( 'medium' ); ?>
 					<?php the_excerpt(); ?>
-					<p>Specialty: <?php echo get_the_term_list( get_the_ID(), 'school-student-category' ); ?></p>
+					<p>
+						<?php 
+						esc_html_e( 'Specialty: ', 'school-theme' ); 
+						echo get_the_term_list( get_the_ID(), 'school-student-category' );
+						?>
+					</p>
 				</article>
 			<?php
 				endwhile;

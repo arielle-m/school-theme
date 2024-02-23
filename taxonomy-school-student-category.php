@@ -15,7 +15,12 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title"><?php single_term_title(); esc_html_e(' Students', 'school-theme'); ?></h1>
+				<h1 class="page-title">
+					<?php 
+						single_term_title(); 
+						esc_html_e(' Students', 'school-theme' ); 
+					?>
+				</h1>
 				<p><?php the_archive_description(); ?></p>
 			</header><!-- .page-header -->
 
