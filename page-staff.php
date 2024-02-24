@@ -22,13 +22,9 @@ get_header();
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
-
 			<header class="entry-header">
 				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			</header>
-
-
-
 
 			<div class="entry-content">
 				<?php the_content(); ?>
@@ -84,8 +80,8 @@ get_header();
 												echo '<p>' . esc_html( $staff_biography ) . '</p>';
 											}
 											
-											if ( $course ) {
-												echo '<p>' . esc_html( $course ) . '</p>';
+											if ( $course ) {												
+												echo '<p><strong>' . esc_html( $course ) . '</strong></p>';
 											}
 											if ( $instructor_website ) {
 												echo '<p><a href="' . esc_url( $instructor_website ) . '">Instructor Website</a></p>';

@@ -31,7 +31,7 @@
 				printf( esc_html__( 'Proudly powered by %s', 'school-theme' ), 'WordPress' );
 				?>
 			</a>
-			<span class="sep"> | </span>
+			<br>			
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-theme' ), 'school-theme', '<a href="https://ariellemarin.com/school/">Arielle Marin & Nando Hospina</a>' );

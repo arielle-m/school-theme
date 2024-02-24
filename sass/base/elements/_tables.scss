@@ -1,4 +1,47 @@
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+	border-collapse: collapse;		
+	margin: 1rem;	
+}
+
+table th {
+	background-color: $color__dark;	
+	color: $color__light;
+}
+
+table, th, td {
+	border: 2px solid;
+}
+
+th, td {
+	padding: .5rem;
+}
+
+@include mq(em(360)) {
+    table {
+        margin: 1rem auto;
+    }
+}
+
+@include mq(em(600)) {
+    table {        
+		width: calc(100% - 2rem);
+    }
+}
+
+@include mq(em(900)) {
+    table {        
+		// width: 100%;
+		margin: 2rem auto;
+    }
+}
+
+@include mq(em(1000)) {
+    table {        
+		width: 60%;
+		// margin: 2rem auto;
+    }
+
+	th, td {
+		padding: 1.5rem;
+	}
 }

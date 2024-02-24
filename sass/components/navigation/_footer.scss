@@ -1,21 +1,17 @@
-footer {
+.site-footer {
     background-color: $color__dark;
     color: $color__light;
     padding: 2rem;
-}
-
-.site-footer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column;    
     align-items: center;
+    font-size: 1rem;
 }
 
 .logo img{
     width: 150px;
     height: auto;
     filter: invert(100%);
-
 }
 
 #menu-footer-menu {
@@ -25,4 +21,35 @@ footer {
 
 .site-info {
     text-align: center;    
+}
+
+.footer-menu h3 {    
+    font-size: 1.4rem; 
+    margin: 1.5rem 0 0 0;  
+}
+
+@include mq(em(900)) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .site-info {
+        font-size: 1rem;
+        padding: 0 2rem;
+    }
+
+    .footer-menu {
+        padding: 0 2rem;
+    }
+
+    .logo img {
+        padding: 0 2rem;
+    }
+}
+
+@include mq(em(1200)) {
+    footer {
+        padding: 2rem 10rem; 
+    }
 }
