@@ -1,0 +1,21 @@
+.home {
+    .entry-content {
+        p {
+            margin-bottom: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .wp-block-columns {
+            max-width: 60rem;
+            margin: 0 auto;
+        }
+    }
+    
+    .home-blog > div{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -35,23 +35,27 @@ get_header();
 			);
 			$blog_query = new WP_Query( $args );
 			if ( $blog_query->have_posts() ){
-				while ( $blog_query->have_posts() ) {
-					$blog_query->the_post();
-					?>
-					<article>						
-						<a href="<?php the_permalink();?>"><?php the_post_thumbnail( 'medium' ); ?>
-						<h3><?php the_title();?></h3> 
-						
-						<!-- use get_the_date() to get the date next time, "the_date" alone didn't work properly -->
-						</a>
-						
-					</article>
-					
+				?>
+				<div>
 					<?php
-				}
-				//after your while loop closes, do the reset_postdata() function
-				wp_reset_postdata();	
-					
+					while ( $blog_query->have_posts() ) {
+						$blog_query->the_post();
+						?>
+						<article>						
+							<a href="<?php the_permalink();?>"><?php the_post_thumbnail( 'medium' ); ?>
+							<h3><?php the_title();?></h3> 
+							
+							<!-- use get_the_date() to get the date next time, "the_date" alone didn't work properly -->
+							</a>
+							
+						</article>
+						
+						<?php
+					}
+					wp_reset_postdata();
+				?>
+				</div>	
+				<?php
 			}
 			?>	
 			</section>

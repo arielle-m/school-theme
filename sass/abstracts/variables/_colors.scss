@@ -1,22 +1,22 @@
-$color__background-body: #d8d8d8;
+$color__primary: #514dcb;
+$color__secondary: #8883e3;
+$color__dark: #20201f;
+$color__light: #f4f4f4;
+
+$color__background-body: #f5f5f5;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: #e6e6e6;
+$color__background-button: $color__secondary;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
 
-$color__primary: #ff6347;
-$color__secondary: #c28734;
-$color__dark: #20201f;
-$color__light: #f4f4f4;
-
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: #4169e1; //royalblue
-$color__link-visited: #800080; //purple
-$color__link-hover: #191970; //midnightblue
+$color__link: $color__secondary;
+$color__link-visited: #342fbb;
+$color__link-hover: #1d196a;
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
