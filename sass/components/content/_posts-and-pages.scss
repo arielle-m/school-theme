@@ -1,5 +1,6 @@
 //Pages
 @import "pages/staff";
+@import "pages/index";
 
 
 
@@ -9,7 +10,7 @@
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .updated:not(.published) {
@@ -19,7 +20,7 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	padding: 1rem;
 }
 
 .page-links {

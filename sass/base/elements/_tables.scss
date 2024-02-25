@@ -4,7 +4,7 @@ table {
 }
 
 table th {
-	background-color: $color__dark;	
+	background-color: $color__dark;
 	color: $color__light;
 }
 
@@ -15,6 +15,12 @@ table, th, td {
 th, td {
 	padding: .5rem;
 }
+
+.wp-block-calendar table {
+    width: 90%;
+    margin: 0 auto;    
+}
+
 
 @include mq(em(360)) {
     table {
@@ -29,16 +35,14 @@ th, td {
 }
 
 @include mq(em(900)) {
-    table {        
-		// width: 100%;
+    table {        		
 		margin: 2rem auto;
     }
 }
 
 @include mq(em(1000)) {
     table {        
-		width: 60%;
-		// margin: 2rem auto;
+		width: 60%;		
     }
 
 	th, td {

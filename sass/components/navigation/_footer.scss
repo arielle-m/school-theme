@@ -8,6 +8,7 @@
     font-size: 1rem;
 }
 
+
 .logo img{
     width: 150px;
     height: auto;
@@ -29,7 +30,7 @@
 }
 
 @include mq(em(900)) {
-    footer {
+    .site-footer {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -49,7 +50,7 @@
 }
 
 @include mq(em(1200)) {
-    footer {
+    .site-footer {
         padding: 2rem 10rem; 
     }
 }
