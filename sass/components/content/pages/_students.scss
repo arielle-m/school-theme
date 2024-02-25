@@ -60,7 +60,8 @@
     }
 }
 
-.tax-school-student-category {
+.tax-school-student-category,
+.search {
     h1 {
         text-align: center;
     }
@@ -77,6 +78,22 @@
         img {
             top: 0;
         }
+    }
+
+    article.school-student {
+        display: flex;
+        flex-wrap: wrap;
+
+        header,
+        h2 {
+            width: 100%;
+        }
+        
+        img {
+            width: 12.5rem;
+            object-fit: cover;
+        }
+
     }
 }
 
